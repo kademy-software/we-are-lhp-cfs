@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap");
+/* COLORS */
+/* FONT */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  border: 10px solid #ff4654;
+  background-color: #0f1923;
+  color: #0f1923;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 960px;
+  height: 560px;
+  background-color: white;
+}
+.container div {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  padding: 36px;
+}
+.container div.heading-block {
+  width: 348px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container div.heading-block .vlrnt-logo {
+  display: flex;
+  align-items: flex-end;
+}
+.container div.heading-block .vlrnt-logo img {
+  width: 100px;
+}
+.container div.signup-form {
+  width: 482px;
+}
+
+.heading-block {
+  background-color: #ff4654;
+  color: white;
+}
+.heading-block h1 {
+  margin: 0;
+  font: 700 64px/66px "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.signup-form {
+  /* Button and hover effect */
+}
+.signup-form p {
+  margin: 0;
+}
+.signup-form form {
+  margin: 30px 0;
+}
+.signup-form form * {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+.signup-form label,
+.signup-form .button-box {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.signup-form label {
+  margin: 8px 0;
+}
+.signup-form input {
+  width: 90%;
+  height: 40px;
+  margin-bottom: 30px;
+  padding: 0 8px;
+  font-family: 'Roboto', sans-serif;
+}
+.signup-form select {
+  width: 95%;
+  height: 48px;
+  margin-bottom: 30px;
+  padding: 0 8px;
+  font-family: 'Roboto', sans-serif;
+}
+.signup-form div.button-box {
+  display: inline-block;
+  width: auto;
+  border: 1px solid rgba(15, 25, 35, 0.4);
+  padding: 6px;
+}
+.signup-form div.button-box .button-mask {
+  cursor: pointer;
+  position: relative;
+  padding: 18px 60px;
+  display: block;
+  overflow: hidden;
+  color: white;
+  background-color: #ff4654;
+}
+.signup-form div.button-box .button-mask:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  width: 130%;
+  height: 100%;
+  background-color: #0f1923;
+  transform: translateX(-100%) skew(-15deg);
+  transition: transform 0.4s ease;
+}
+.signup-form div.button-box .button-mask:hover:before {
+  transform: translateX(0) skew(-15deg);
+}
+.signup-form div.button-box .button-mask span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Outlined text background */
+.bg-text-stroke {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1000px 100px;
+  z-index: -1;
+}
+.bg-text-stroke span {
+  font: 700 21rem "Teko", sans-serif;
+  line-height: 0.8;
+  text-transform: uppercase;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
+  -webkit-text-stroke-width: 1px;
+}
+.btn {
+  /* Clean style */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--button-text-color);
+  cursor: pointer;
+  /* Clean style */
+  
+  --button-text-color: var(--background-color);
+  --button-text-color-hover: var(--button-background-color);
+  --border-color: #7D8082;
+  --button-background-color: #ece8e1;
+  --highlight-color: #ff4655;
+  --button-inner-border-color: transparent;
+  --button-bits-color: var(--background-color);
+  --button-bits-color-hover: var(--button-background-color);
+  
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.btn::before,
+.btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0; left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid var(--border-color);
+  transition: all .15s ease;
+}
+
+.btn::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.btn::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.btn:active::before,
+.btn:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.btn:active::before {
+  top: 3px;
+}
+
+.btn:active::after {
+  bottom: 3px;
+}
+
+.btn__inner {
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+  background-color: var(--button-background-color);
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+}
+
+.btn__inner::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: var(--button-bits-color);
+}
+
+.btn__inner::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--button-bits-color);
+  transition: all .2s ease;
+}
+
+.btn__slide {
+  display: block;
+  position: absolute;
+  top: 0; bottom: -1px; left: -8px;
+  width: 0;
+  background-color: var(--highlight-color);
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.btn__content {
+  position: relative;
+}
+
+.btn:hover {
+  color: var(--button-text-color-hover);
+}
+
+.btn:hover .btn__slide {
+  width: calc(100% + 15px);
+}
+
+.btn:hover .btn__inner::after {
+  background-color: var(--button-bits-color-hover);
+}
+
+.btn--light {
+  --button-background-color: var(--background-color);
+  --button-text-color: var(--highlight-color);
+  --button-inner-border-color: var(--highlight-color);
+  --button-text-color-hover: #ece8e1;
+  --button-bits-color-hover: #ece8e1;
+}

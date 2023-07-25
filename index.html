@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Confession Form</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <div class="container">
+            <div class="heading-block">
+                <div>
+                    <h1>Le Hong Phong <span style="color: #0f1923;">Media &
+                            Confession <div class="display-time"></div></h1>
+                    </div>
+                    <div class="vlrnt-logo">
+                        <img
+                            src="https://logodownload.org/wp-content/uploads/2020/06/valorant-logo-1.png"
+                            alt>
+                    </div>
+                </div>
+
+                <div class="signup-form">
+                    <p>Confessions được đăng là những confession: <br>
+                        + Rõ ràng (về nội dung, dấu câu...) <br>
+                        + Không có từ ngữ quá khiếm nhã <br>
+                        + Không mang tính quá chỉ trích, bêu xấu, xúc phạm, đả
+                        kích trực tiếp hoặc gián tiếp một đối tượng, tập thể hay
+                        nhà trường, hoặc vấn đề đưa ra nhạy cảm.
+                    </p>
+                    <form   action="https://formbold.com/s/35XA7"
+                    method="POST">
+                        <label for="sidearm">Dạng biểu mẫu
+                        <select name="sidearm" id="sidearm">
+                            <option value>Confession</option>
+                            <option value>Tố cáo Confession</option>
+                        </select>
+                    </label>
+                        <label for="email"  >Nội dung
+                        <textarea name="nd" rows="12" cols="60"></textarea>
+                        <!-- <label for="codename">Your favorite sidearm</label><input type="text" name="codename"> -->
+                    </label>
+                        <div>
+                            <div>
+                                <button class="btn">
+                                    <span class="btn__inner">
+                                        <span class="btn__slide"></span>
+                                        <span class="btn__content">Nhấn để gửi đến máy chủ</span>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="bg-text-stroke">
+                    <span>WE ARE </span>
+                    <span>LHPers</span>
+                </div>
+                <!-- partial -->
+
+            </body>
+        </html>
+        <script>
+    const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+</script>
