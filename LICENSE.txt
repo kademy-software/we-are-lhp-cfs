@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 Rigs (https://codepen.io/a44rgonzales/pen/KKzZNRe)
+Copyright (c) 2023 Rigs (kademy project)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
